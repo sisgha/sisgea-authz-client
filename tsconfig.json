@@ -2,7 +2,9 @@
   "compilerOptions": {
     "strict": true,
     "module": "Node16",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "declaration": true,

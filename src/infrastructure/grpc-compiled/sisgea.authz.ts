@@ -390,16 +390,21 @@ export const SisgeaAuthzCheckerDefinition = {
 
 export interface SisgeaAuthzCheckerServiceImplementation<CallContextExt = {}> {
   anonymousCan(request: GenericCanRequest, context: CallContext & CallContextExt): Promise<DeepPartial<CanResponse>>;
+
   anonymousAllowedResources(
     request: GenericCanRequest,
     context: CallContext & CallContextExt,
   ): ServerStreamingMethodResult<DeepPartial<AllowedResourceResponse>>;
+
   internalSystemCan(request: GenericCanRequest, context: CallContext & CallContextExt): Promise<DeepPartial<CanResponse>>;
+
   internalSystemAllowedResources(
     request: GenericCanRequest,
     context: CallContext & CallContextExt,
   ): ServerStreamingMethodResult<DeepPartial<AllowedResourceResponse>>;
+
   userCan(request: UserCanRequest, context: CallContext & CallContextExt): Promise<DeepPartial<CanResponse>>;
+
   userAllowedResources(
     request: UserCanRequest,
     context: CallContext & CallContextExt,
@@ -408,16 +413,21 @@ export interface SisgeaAuthzCheckerServiceImplementation<CallContextExt = {}> {
 
 export interface SisgeaAuthzCheckerClient<CallOptionsExt = {}> {
   anonymousCan(request: DeepPartial<GenericCanRequest>, options?: CallOptions & CallOptionsExt): Promise<CanResponse>;
+
   anonymousAllowedResources(
     request: DeepPartial<GenericCanRequest>,
     options?: CallOptions & CallOptionsExt,
   ): AsyncIterable<AllowedResourceResponse>;
+
   internalSystemCan(request: DeepPartial<GenericCanRequest>, options?: CallOptions & CallOptionsExt): Promise<CanResponse>;
+
   internalSystemAllowedResources(
     request: DeepPartial<GenericCanRequest>,
     options?: CallOptions & CallOptionsExt,
   ): AsyncIterable<AllowedResourceResponse>;
+
   userCan(request: DeepPartial<UserCanRequest>, options?: CallOptions & CallOptionsExt): Promise<CanResponse>;
+
   userAllowedResources(
     request: DeepPartial<UserCanRequest>,
     options?: CallOptions & CallOptionsExt,
