@@ -29,9 +29,5 @@
   },
   "peerDependencies": {
     "nice-grpc": "^2.1.7"
-  },
-  "files": [
-    "dist/**/*",
-    "proto/*"
-  ]
+  }
 }
